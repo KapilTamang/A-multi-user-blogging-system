@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #3490dc; color: #fff;">
     <div class="container-fluid" style="margin-left: 70px;">
-        <span style="width: 30px; height: 30px; background-color: #eeeeee; margin-right: 8px; border-radius: 50%; padding: 3px;">
-            <img src=" {{ asset('images/favicon.png') }} " alt="" width="25px">
+        <span style="width: 30px; height: 30px; background-color: #eeeeee; margin-right: 8px; border-radius: 50%; padding: 6px;">
+            <img src=" {{ asset('images/favicon.ico') }} " alt="" width="20px">
         </span>
         <a class="navbar-brand" href="{{ route('blogs') }}" style="font-weight: 600;">
             {{ config('app.name', 'Laravel') }}

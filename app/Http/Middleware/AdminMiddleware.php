@@ -18,7 +18,7 @@ class AdminMiddleware
         $user = $request->user();
         if($user->role->id === 1) {
             return $next($request);
-        }
+        } 
         return redirect('/');
     }
 }

@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use Illuminate\Http\request;
 class RegisterController extends Controller
 {
     /*
@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    // protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -73,5 +73,18 @@ class RegisterController extends Controller
             'role_id' => 3,
         ]);
 
+    }
+
+     /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    public function registered(Request $request, $user)
+    {
+        $request->session()->flash('registrationSuccess', 'Registration Successful');
+        return redirect('/');
     }
 }

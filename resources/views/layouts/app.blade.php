@@ -22,7 +22,7 @@
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('css/content.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/glider.min.css') }}">
-    <link rel="shortcut icon" type="image/jpg" href=" {{ asset('images/favicon.png') }} "/>
+    <link rel="shortcut icon" type="image/jpg" href=" {{ asset('images/favicon.ico') }} "/>
 
 </head>
 <body>
@@ -75,6 +75,10 @@
 
     @if(Session::has('logoutSuccess'))
         <script src="{{ asset('js/alerts/logout_success.js') }}"></script>
+    @endif
+
+    @if(Session::has('registrationSuccess'))
+        <script src="{{ asset('js/alerts/registration_success.js') }}"></script>
     @endif
 
     @if(Session::has('messageSuccess'))
