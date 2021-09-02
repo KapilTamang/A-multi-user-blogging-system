@@ -4,7 +4,7 @@ A blogging system that allows multiple users to create account and post blogs, c
 
 # Usage
 - run 'npm install' for installing dependencies.
-- rename .env.exaple file to .env and provide the required credentilas.
+- rename .env.example file to .env and provide the required credentials.
 - create your database and run 'php artisan migrate'.
 - run 'php artisan db:seed' if you want to start with dummy data.
 - for OAUTH 2 authentication, register your app with facebook and google and setup the callback url.
